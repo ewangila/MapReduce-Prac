@@ -1,80 +1,24 @@
-# MapReduce Data Analysis
+# MapReduce on Romeo and Juliet
 
-This project demonstrates the use of the **MapReduce** programming model in Python to efficiently process and analyze large datasets. The scripts use the `mrjob` library to perform distributed data processing tasks.
+A collection of Python MapReduce jobs built with mrjob that demonstrate foundational and intermediate data-processing patterns on the text of Romeo and Juliet.
 
-## Project Structure
+## What’s Included
 
-```
-├── wordcount.py      # Counts the frequency of words in a dataset
-├── song_count.py     # Calculates the total number of times each song was played
-├── songplays.txt     # Sample dataset used for song play analysis
-└── README.md
-```
+| Script            | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| wordcount.py    | Basic word-frequency counter (strips punctuation, lowercases)               |
+| wordcountmax.py | Multi-step job that finds the single most frequent word                     |
+| top5.py         | Multi-step job that returns the top 5 most frequent words (stop words filtered) |
+| top10.py        | Same as above but returns the top 10                                        |
+| countrj.py      | Counts occurrences of the names “Romeo” and “Juliet”                        |
+| song_count.py   | Simple line-count aggregator (leftover practice script)                     |
 
-## Features
+## Tech Stack
 
-- Count word frequencies from text files.
-- Analyze song play data using MapReduce.
-- Demonstrates the Mapper and Reducer workflow with Python.
-- Built using the `mrjob` framework.
+- Python 3
+- [mrjob](https://mrjob.readthedocs.io/) – MapReduce framework for Python
 
-## Requirements
-
-- Python 
-- mrjob
-
-Install the required dependency:
+## Setup
 
 ```bash
-pip install mrjob
-```
-
-## Usage
-
-### Word Count
-
-```bash
-python wordcount.py <input_file>
-```
-
-Example:
-
-```bash
-python wordcount.py text.txt
-```
-
-### Song Play Count
-
-```bash
-python song_count.py songplays.txt
-```
-
-## Example Output
-
-**Word Count**
-
-```
-hello    15
-world    8
-python   5
-```
-
-**Song Play Count**
-
-```
-Song A    120
-Song B     95
-Song C     74
-```
-
-## Skills Demonstrated
-
-- Python
-- MapReduce
-- Data Processing
-- Big Data Concepts
-- `mrjob`
-
-## License
-
-This project is open source and available under the MIT License.
+pip install -r requirements.txt
