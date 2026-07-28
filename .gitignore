@@ -1,0 +1,25 @@
+# Byte-compiled / cache
+_pycache_/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# mrjob / local runs
+*.log
+mrjob.conf
