@@ -1,17 +1,14 @@
-# MapReduce on Romeo and Juliet
+# MapReduce Practice
 
-A collection of Python MapReduce jobs built with mrjob that demonstrate foundational and intermediate data-processing patterns on the text of Romeo and Juliet.
+A small collection of Python MapReduce jobs built with [mrjob](https://mrjob.readthedocs.io/) for practicing foundational data-processing patterns.
 
 ## What’s Included
 
-| Script            | Description                                                                 |
-|-------------------|-----------------------------------------------------------------------------|
-| wordcount.py    | Basic word-frequency counter (strips punctuation, lowercases)               |
-| wordcountmax.py | Multi-step job that finds the single most frequent word                     |
-| top5.py         | Multi-step job that returns the top 5 most frequent words (stop words filtered) |
-| top10.py        | Same as above but returns the top 10                                        |
-| countrj.py      | Counts occurrences of the names “Romeo” and “Juliet”                        |
-| song_count.py   | Simple line-count aggregator (leftover practice script)                     |
+| Script          | Description                                                              |
+|-----------------|--------------------------------------------------------------------------|
+| `wordcount.py`  | Basic word-frequency counter (strips punctuation and lowercases words)  |
+| `song_count.py` | Counts how many times each song appears in a list of song plays         |
+| `songplays.txt` | Sample input data for the song counting job                             |
 
 ## Tech Stack
 
@@ -22,3 +19,8 @@ A collection of Python MapReduce jobs built with mrjob that demonstrate foundati
 
 ```bash
 pip install -r requirements.txt
+Usage
+Word count example:
+Bashpython wordcount.py some_text_file.txt
+Song play count example:
+Bashpython song_count.py songplays.txt
